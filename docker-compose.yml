@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  web:
+    image: amazonlinux:2
+    build: .
+    container_name: amazonlinux_rust
+    hostname: container.amazonlinux2.planeimage
+    privileged: true
+    ports:
+      - "2220:22"
+    restart: always
